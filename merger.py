@@ -22,6 +22,17 @@ def merge_curdir_pdfs():
     merger.write(download_dir + 'curdir_merge.pdf')
 
 
+def merge_cmdline_pdfs(pdf_list):
+    '''
+    Merge all pdfs in command line
+    and save to download directory
+    pdf_list: ListOf Str
+    '''
+    for pdf in pdf_list:
+        merger.append(pdf)
+    merger.write(download_dir + 'cmdline_merge.pdf')
+
+
 def main():
 
     print(len(sys.argv))
@@ -29,6 +40,11 @@ def main():
     if len(sys.argv) == 1:  # no command line arguments
         merge_curdir_pdfs()
         sys.exit(0)
+    else:  # command line arguments present
+        pdf_list = sys.argv[1:]
+        # Cross-platform compatibility between wsl and windows
+        wsl_pdf_list = [pdf.replace("C:", "/mnt/c").replace("\\", "/") for pdf in pdf_list]
+        merge_cmdline_pdfs(wsl_pdf_list)
 
 
 if __name__ == '__main__':
