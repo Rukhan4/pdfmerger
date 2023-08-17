@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
     <title>PDF Merger</title>
 </head>
 
@@ -14,10 +15,14 @@
         <form action="/merge" method="POST" class="form" enctype="multipart/form-data">
             <input type="file" name="file1" accept=".pdf" required>
             <input type="file" name="file2" accept=".pdf" required>
+            <div class="sub">
+                <input type="submit" id="submit" value="Merge PDFs">
+            </div>
         </form>
-        <div class="sub">
-            <input type="submit" id="submit" value="Merge PDFs">
+        <div class="para">
+            <p id="end"></p>
         </div>
+
     </div>
 </body>
 
