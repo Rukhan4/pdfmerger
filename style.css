@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: #000;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.form {
+    margin-left: 10%;
+    margin-right: 50px;
+}
+
+#submit {
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+#submit:hover {background-color: #3e8e41}
+
+#submit:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+.sub {
+    /*put the button in the middle of the page*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
