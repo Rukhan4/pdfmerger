@@ -12,7 +12,6 @@ def index():
 
 @app.route('/merge', methods=['POST'])
 def merge_pdfs():
-    print("Merging PDFs....")
     pdf1 = request.files['file1']
     pdf2 = request.files['file2']
 
