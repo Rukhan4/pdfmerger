@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'pdf-merger-sk1'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_82E4E0D7AAFE4FA88A3A1708DA3B0F86 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DC55888931B540238189B9BD0B613605 }}
