@@ -10,6 +10,7 @@ merger = PyPDF2.PdfMerger()
 download_dir = "/mnt/c/Users/18687/Downloads/"
 # print(download_dir)
 
+# Set save file name
 filename = str(input("Enter save file name: "))
 
 
